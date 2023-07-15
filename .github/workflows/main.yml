@@ -4,7 +4,7 @@ jobs:
   call-workflow:
     # You may pin to the exact commit or the version.
     # uses: xanderhendriks/action-build-stm32cubeide@32d524575d85f129bf6ddd810622160577416bf3
-    uses: xanderhendriks/action-build-stm32cubeide/action.yml@7.2
+    uses: xanderhendriks/action-build-stm32cubeide@7.2
     with:
       project-path: ../../
       project-target: Snake
