@@ -1,0 +1,19 @@
+#ifndef __BUTTON_DRIVER_CONFIG_H__
+#define __BUTTON_DRIVER_CONFIG_H__
+
+// place for include button hw header
+#include <gpio.hpp>
+#include <stdint.h>
+
+#define BUTTON_DRIVER_USE_CUSTOM_EVENT_HANDLER
+
+#define BUTTON_DRIVER_HW_TYPE gpio_t
+#define BUTTON_DRIVER_HW_READ(pHW) (!GPIORead(pHW)) // bool BUTTON_DRIVER_HW_READ(BUTTON_DRIVER_HW_TYPE* pHW)
+
+#define BUTTON_DRIVER_COUNTER_TYPE         uint32_t
+#define BUTTON_DRIVER_COUNTER_MAX_VAL      12
+#define BUTTON_DRIVER_COUNTER_MIN_VAL      3
+#define BUTTON_DRIVER_COUNTER_PRESSED_VAL  9
+#define BUTTON_DRIVER_COUNTER_RELEASED_VAL 6
+
+#endif // __BUTTON_DRIVER_CONFIG_H__

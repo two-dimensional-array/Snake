@@ -1,0 +1,10 @@
+hd44780u.c:154:13:SendHalfByte	1
+hd44780u.c:193:13:WriteInstructionWithDelay	1
+hd44780u.c:215:6:HD44780USetPosition	3
+hd44780u.c:235:6:HD44780UWriteStringWithOffset	4
+hd44780u.c:230:6:HD44780UWriteString	1
+hd44780u.c:250:6:HD44780UClear	1
+hd44780u.c:255:6:HD44780UReturnHome	1
+hd44780u.c:260:6:HD44780USetCursor	2
+hd44780u.c:277:6:HD44780USetEntryMode	1
+hd44780u.c:282:6:HD44780UInit	1
