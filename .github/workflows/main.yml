@@ -1,10 +1,22 @@
+name: Build STM32 Project
+
 on: [push]
 
 jobs:
-  call-workflow:
-    # You may pin to the exact commit or the version.
-    # uses: xanderhendriks/action-build-stm32cubeide@32d524575d85f129bf6ddd810622160577416bf3
-    uses: xanderhendriks/action-build-stm32cubeide@7.2
-    with:
-      project-path: ../../
-      project-target: Snake
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+
+      - name: Build STM32CubeIde project
+        uses: xanderhendriks/action-build-stm32cubeide@v7.2
+        with:
+          project-path: 'stm32ci_test'
+          project-target: 'stm32ci_test'
+          
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: STM32_Firmware
+          path: Release/*.*
