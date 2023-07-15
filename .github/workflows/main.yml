@@ -6,17 +6,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
       - name: Build STM32CubeIde project
         uses: xanderhendriks/action-build-stm32cubeide@v7.2
         with:
-          project-path: 'stm32ci_test'
-          project-target: 'stm32ci_test'
+          project-path: "."
+          project-target: "Snake"
           
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: STM32_Firmware
+          name: Snake
           path: Release/*.*
