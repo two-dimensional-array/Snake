@@ -1,8 +1,0 @@
-snake.cpp:76:6:void SnakeGenerateAple(uint32_t)	8
-snake.cpp:110:6:void DrawSnake(std::function<void(SPoint&)>)	2
-list.tcc:66:5:void std::__cxx11::_List_base<_Tp, _Alloc>::_M_clear() [with _Tp = SPoint; _Alloc = std::allocator<SPoint>]	2
-stl_list.h:1909:8:) [with _Args = {const SPoint&}; _Tp = SPoint; _Alloc = std::allocator<SPoint>]	1
-snake.cpp:43:6:void SnakeReset()	4
-snake.cpp:48:6:bool SnakeMove(EMoveDirection)	14
-snake.cpp:116:1:cpp)	1
-snake.cpp:116:1:cpp)	1
