@@ -4,3 +4,6 @@
 [submodule "CustomDrivers/GPIO"]
 	path = CustomDrivers/GPIO
 	url = https://github.com/two-dimensional-array/GPIO.git
+[submodule "CustomDrivers/ButtonDriver"]
+	path = CustomDrivers/ButtonDriver
+	url = https://github.com/two-dimensional-array/ButtonDriver.git
