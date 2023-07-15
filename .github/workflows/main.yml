@@ -7,6 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          submodules: 'recursive'
 
       - name: Build STM32CubeIde project
         uses: xanderhendriks/action-build-stm32cubeide@v7.2
