@@ -7,3 +7,6 @@
 [submodule "CustomDrivers/ButtonDriver"]
 	path = CustomDrivers/ButtonDriver
 	url = https://github.com/two-dimensional-array/ButtonDriver.git
+[submodule "CustomDrivers/HD44780U"]
+	path = CustomDrivers/HD44780U
+	url = https://github.com/two-dimensional-array/HD44780U.git
