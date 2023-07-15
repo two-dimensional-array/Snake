@@ -1,4 +1,4 @@
-name: Build STM32 Project
+name: Build Snake Game Project
 
 on: [push]
 
@@ -6,17 +6,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Pull project
+        uses: actions/checkout@v3
         with:
           submodules: 'recursive'
 
-      - name: Build STM32CubeIde project
+      - name: Build project
         uses: xanderhendriks/action-build-stm32cubeide@v7.2
         with:
           project-path: './'
           project-target: 'Snake'
           
-      - name: Archive production artifacts
+      - name: Download firmware
         uses: actions/upload-artifact@v3
         with:
           name: Snake
