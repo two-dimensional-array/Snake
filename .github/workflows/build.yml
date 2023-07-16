@@ -1,0 +1,33 @@
+name: Build Snake Game Project
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull project
+        uses: actions/checkout@v3
+        with:
+          submodules: 'recursive'
+
+      - name: Build project
+        uses: xanderhendriks/action-build-stm32cubeide@v7.2
+        with:
+          project-path: './'
+          project-target: 'Snake'
+          
+      - name: Download Release firmware
+        uses: actions/upload-artifact@v3
+        with:
+          name: SnakeRelease
+          path: Release/*.*
+          
+      - name: Download Debug firmware
+        uses: actions/upload-artifact@v3
+        with:
+          name: SnakeDebug
+          path: Debug/*.*

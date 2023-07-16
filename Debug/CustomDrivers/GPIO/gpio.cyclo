@@ -1,4 +1,0 @@
-gpio.cpp:15:6:bool GPIORead(gpio_t*)	1
-gpio.cpp:20:6:void GPIOWrite(gpio_t*, bool)	2
-gpio.cpp:25:12:gpio_pin_t GPIOReadArray(gpio_t*, size_t)	2
-gpio.cpp:37:6:void GPIOWriteArray(gpio_t*, size_t, gpio_pin_t)	2
