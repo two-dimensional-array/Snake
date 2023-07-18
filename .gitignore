@@ -7,11 +7,14 @@
 *.ko
 *.obj
 *.elf
+*.bin
+*.cyclo
 
 # Linker output
 *.ilk
 *.map
 *.exp
+*.list
 
 # Precompiled Headers
 *.gch
@@ -136,7 +139,3 @@ local.properties
 ### Eclipse Patch ###
 # Spring Boot Tooling
 .sts4-cache/
-
-### Build Folders ###
-Release/
-Debug/
