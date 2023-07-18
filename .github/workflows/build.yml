@@ -13,6 +13,7 @@ jobs:
 
       - name: Build project
         run: | 
+          echo ls
           cd Release/
           make clean
           make all
