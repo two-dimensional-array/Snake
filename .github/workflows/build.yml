@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   build:
-    runs-on: mingw
+    runs-on: windows
     steps:
       - name: Pull project
         uses: actions/checkout@v3
