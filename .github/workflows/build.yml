@@ -15,8 +15,7 @@ jobs:
         run: | 
           ls
           cd Release/
-          pacman -V
-          pacman -S mingw-w64-x86_64-arm-none-eabi-toolchain
+          sudo apt install gcc-arm-none-eabi
           make clean
           make all
           cd ../Debug/
