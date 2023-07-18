@@ -13,10 +13,10 @@ jobs:
 
       - name: Build project
         run: | 
-          pacman -V
-          pacman -S mingw-w64-x86_64-arm-none-eabi-toolchain
           ls
           cd Release/
+          pacman -V
+          pacman -S mingw-w64-x86_64-arm-none-eabi-toolchain
           make clean
           make all
           cd ../Debug/
