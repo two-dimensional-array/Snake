@@ -19,8 +19,10 @@ jobs:
         run: |
           sudo apt-get install gcc-arm-none-eabi
           cd Release/
+          make clean
           make all
           cd ../Debug/
+          make clean
           make all
 
       - name: Download Release firmware
