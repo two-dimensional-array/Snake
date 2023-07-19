@@ -24,7 +24,7 @@ jobs:
           make all
           cd ../Debug/
           make all
-          
+
       - name: Download Release firmware
         uses: actions/upload-artifact@v3
         with:
