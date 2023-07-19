@@ -89,8 +89,8 @@ all: main-build
 main-build: Snake.elf secondary-outputs
 
 # Tool invocations
-Snake.elf Snake.map: $(OBJS) $(USER_OBJS) C:\education\Snake\STM32F407VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "Snake.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\education\Snake\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Snake.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Snake.elf Snake.map: $(OBJS) $(USER_OBJS) ../STM32F407VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-g++ -o "Snake.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"../STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Snake.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
