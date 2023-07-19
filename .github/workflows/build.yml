@@ -15,13 +15,6 @@ jobs:
         with:
           submodules: 'recursive'
 
-      - name: Clean project
-        run: |
-          cd Release/
-          make clean
-          cd ../Debug/
-          make clean
-          
       - name: Build project
         run: |
           cd Release/
