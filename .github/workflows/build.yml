@@ -11,14 +11,18 @@ jobs:
         with:
           submodules: 'recursive'
 
+      - name: Clean project
+        run: |
+          cd Release/
+          make clean
+          cd ../Debug/
+          make clean
 
       - name: Build project
         run: |
           cd Release/
-          make clean
           make all
           cd ../Debug/
-          make clean
           make all
           
       - name: Download Release firmware
