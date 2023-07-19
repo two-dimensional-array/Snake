@@ -17,12 +17,11 @@ jobs:
 
       - name: Build project
         run: |
-          ls
+          sudo apt-get install gcc-arm-none-eabi
           cd Release/
-          ls
           make all
-          # cd ../Debug/
-          # make all
+          cd ../Debug/
+          make all
 
       - name: Download Release firmware
         uses: actions/upload-artifact@v3
