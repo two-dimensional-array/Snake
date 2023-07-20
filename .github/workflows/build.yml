@@ -4,6 +4,7 @@ on:
   push:
     branches:
     - main
+    - build
 
 jobs:
   build:
@@ -15,19 +16,21 @@ jobs:
           submodules: 'recursive'
 
       - name: Build project
-        uses: xanderhendriks/action-build-stm32cubeide@v7.2
-        with:
-          project-path: './'
-          project-target: 'Snake'
-          
+        run: |
+          sudo apt-get install gcc-arm-none-eabi
+          cd Release/
+          make all
+          cd ../Debug/
+          make all
+
       - name: Download Release firmware
         uses: actions/upload-artifact@v3
         with:
           name: SnakeRelease
-          path: Release/*.*
+          path: Release/Snake.*
           
       - name: Download Debug firmware
         uses: actions/upload-artifact@v3
         with:
           name: SnakeDebug
-          path: Debug/*.*
+          path: Debug/Snake.*
