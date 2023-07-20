@@ -6,7 +6,7 @@
  */
 #include <stdint.h>
 #include <list>
-#include "snake.hpp"
+#include <snake.hpp>
 
 static std::list<SPoint> snake = {{0, 0}};
 SPoint gAple;
